@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.63acfc9e.css",
+    "main.js": "/static/js/main.e7aaec4f.js",
+    "static/js/453.cdae48ad.chunk.js": "/static/js/453.cdae48ad.chunk.js",
+    "static/media/moss.jpg": "/static/media/moss.67170014bbef5d74b923.jpg",
+    "static/media/techsagna.png": "/static/media/techsagna.a06cb38a62e1e37b9f2a.png",
+    "index.html": "/index.html",
+    "main.63acfc9e.css.map": "/static/css/main.63acfc9e.css.map",
+    "main.e7aaec4f.js.map": "/static/js/main.e7aaec4f.js.map",
+    "453.cdae48ad.chunk.js.map": "/static/js/453.cdae48ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63acfc9e.css",
+    "static/js/main.e7aaec4f.js"
+  ]
+}
