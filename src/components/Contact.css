@@ -1,0 +1,20 @@
+.contact {
+    background: linear-gradient(145deg, #2b2b2b, #1f1f1f);
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .contact a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background: #7302fd;
+    color: #1f1f1f;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .contact a:hover {
+    background: #fff;
+    transform: scale(1.1);
+  }
+  

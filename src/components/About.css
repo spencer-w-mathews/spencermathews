@@ -1,0 +1,31 @@
+.about {
+  position: relative;
+    overflow: hidden;
+    padding: 40px;
+    max-width: 300px;
+    z-index: 1000;  
+    color: #eee;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .about p {
+    margin-top: 10vh;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(117, 213, 254, 0.5); */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    margin-bottom: 0px;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

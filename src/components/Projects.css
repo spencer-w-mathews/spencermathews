@@ -1,0 +1,33 @@
+.projects {
+  position: relative;
+    padding: 50px;
+    z-index: 1000; 
+  }
+  
+  .project-list {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .project-card {
+    background: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+  }
+  

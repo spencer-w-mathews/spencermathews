@@ -1,0 +1,40 @@
+.skills {
+    /* background: #1f1f1f; */
+    animation: popUp 1s ease-in-out;
+    margin-top: -20vh;
+  }
+  
+  .skills ul {
+    margin-left: -40px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .skills li {
+    padding: 10px 15px;
+    background: #4CC9FE;
+    color: #333;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .skills li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(187, 134, 252, 0.5);
+  }
+  
+  @keyframes popUp {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
