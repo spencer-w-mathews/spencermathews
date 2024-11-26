@@ -8,9 +8,9 @@ const ThreeScene = () => {
   useEffect(() => {
     // Setup scene, camera, and renderer
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.outerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.outerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     mountRef.current.appendChild(renderer.domElement);
 
@@ -52,8 +52,8 @@ const ThreeScene = () => {
     // Handle window resizing
     const handleResize = () => {
 
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      camera.aspect = window.innerWidth / window.innerHeight;
+        renderer.setSize(window.innerWidth, window.outerHeight);
+      camera.aspect = window.innerWidth / window.outerHeight;
       camera.updateProjectionMatrix();
     };
 

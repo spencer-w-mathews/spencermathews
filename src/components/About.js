@@ -28,11 +28,13 @@ const About = () => {
 
 
   return(
+  <div className='about-page'>
   <div id="about" className="about" ref={textRef}>
     {/* <h2>About Me</h2> */}
     <p className='line'>
     I am a skilled developer with expertise in React, C#, SQL, TypeScript, CSS, Express, and MongoDB. I have spent the past two years contributing to the health tech industry, building impactful solutions that improve lives. Before transitioning into tech, I honed my interpersonal skills over five years working at a carwash, where I developed a strong ability to connect with people and understand their needs—a foundation that complements my technical expertise.
     </p>
+  </div>
   </div>
 )};
 

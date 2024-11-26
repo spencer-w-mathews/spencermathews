@@ -4,7 +4,7 @@ import techsagna from '../techsagna.png'
 
 const projects = [
   { title: 'Portfolio Website', description: 'This personal portfolio built with React.' },
-  { title: 'Techsagna', description: 'A React app for an local IT company', link: 'https://spencer-w-mathews.github.io/techsagna/#/', image:  techsagna},
+  { title: 'Techsagna', description: 'A React app for a local IT company', link: 'https://spencer-w-mathews.github.io/techsagna/#/', image:  techsagna},
 ];
 
 const Projects = () => (

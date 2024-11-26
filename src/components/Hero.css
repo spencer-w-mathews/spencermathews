@@ -1,3 +1,10 @@
+.home-page{
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  z-index: 1000;
+}
+
 .hero {
     position: relative;
     height: 100vh;
@@ -19,7 +26,7 @@
     font-size: 3.5rem;
     margin-bottom: 15px;
     color: #4CC9FE;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #000;
     border-radius: 15px 15px 0px 0px;
     padding: 15px 20px;
     width: fit-content;
@@ -31,7 +38,7 @@
   .hero p {
     font-size: 1.8rem;
     margin-bottom: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #000;
     border-radius: 15px;
     padding: 15px 20px;
     width: fit-content;

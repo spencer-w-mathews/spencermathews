@@ -27,22 +27,22 @@
     width: 400px;
     margin-right: auto;
     margin-left:  auto;
-    gap: 15px;
     color: #eee;
-    padding-right: 35px;
+    padding-right: 38px;
   }
   
   .nav-link {
     color: #eee;
     font-size: 1.1rem;
+    width: 80px;
     text-decoration: none;
+    margin-right: 20px;
     padding: 8px 15px;
     transition: background-color 0.3s;
   }
   
   .nav-link:hover {
     color: #000;
-
     background-color: #4CC9FE;
     border-radius: 4px;
   }
@@ -114,8 +114,9 @@
   
     .navbar-toggle {
       position: absolute;
-      right: 12px;
+      right: -22px;
       top: 12px;
+      font-size: 2.7rem;
     }
 
   }

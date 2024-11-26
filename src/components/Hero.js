@@ -42,12 +42,14 @@ const Hero = () => {
   }, []);
 
   return(
-  <div className="hero" ref={textRef}>
-    <div className="hero-content">
-      <h2 className="line">Hello, I'm Spencer.</h2>
-      <p className="line2">Full-Stack Software Engineer</p>
+  <div className='home-page'>
+    <div className="hero" ref={textRef}>
+      <div className="hero-content">
+        <h2 className="line">Hello, I'm Spencer.</h2>
+        <p className="line2">Full-Stack Software Engineer</p>
+      </div>
+      
     </div>
-    
   </div>
 )};
 
