@@ -43,15 +43,28 @@
     background-color: lightgrey;
   }
   
-  .toggle-dark-mode {
-    padding: 10px;
+  .toggle-dark-mode.dark-mode {
+ padding: 12px 20px;
     cursor: pointer;
     border-radius: 20px;
-    background-color: #ddd;
     border: none;
     font-size: 14px;
-    height: 40px;
+    height: fit-content;
     font-family: 'Georgia', serif;
+    background-color: #FFF;
+    color: black;
+  }
+
+  .toggle-dark-mode.light-mode {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    height: fit-content;
+    font-family: 'Georgia', serif;
+    background-color: black;
+    color: white;
   }
   
   /* Content container */
@@ -90,6 +103,8 @@
   .x-mark button{
     z-index: 90000;
     display: flex;
+    padding: 5px 20px;
+    font-size: 18px;
     margin-left: auto;
     cursor: pointer;
     background-color: #333;
@@ -105,22 +120,38 @@
     width: 90%;
     padding: 10px;
   }
+  
   .toggle-dark-mode{
     display: none;
   }
 
-  .toggle-dark-mode-mobile{
-        display: flex;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 20px;
-        border: none;
-        font-size: 14px;
-        height: 40px;
-        font-family: 'Georgia', serif;
-        margin-bottom: 10px;
+  .toggle-dark-mode-mobile.dark-mode {
+    display: flex;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    height: fit-content;
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    color: black;
   }
 
+  .toggle-dark-mode-mobile.light-mode {
+    display: flex;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    height: fit-content;
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+  }
 
   .tabs {
     display: none; /* Hide the tabs on mobile */
@@ -136,26 +167,9 @@
     padding: 20px;
   }
 
-  .tabs.menu-open {
-    display: flex; /* Show the tabs when menu is open */
+    .tab-content.open {
+    height: 65vh; /* Take up 90% of the viewport height */
+    opacity: 1;  /* Make visible */
   }
-
-  .hamburger-menu {
-    display: block; /* Show hamburger menu */
-  }
-
-  .hamburger-icon {
-    position: relative;
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-  }
-
-  .hamburger-icon::before {
-    top: 10px;
-  }
-
-  .hamburger-icon::after {
-    top: -10px;
-  }
+  
 }

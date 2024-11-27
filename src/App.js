@@ -44,7 +44,11 @@ const App = () => {
 
   return (
     <div className={`app-container ${isDarkMode ? "dark" : "light"}`}>
-      <div className="background"></div>
+      {isDarkMode ? (
+        <div className="background"></div>
+      ) : (
+        <div className="backgroundlight"></div>
+      )}
       {/* Navigation */}
       <Navigation
         activeTab={activeTab}

@@ -26,9 +26,14 @@ const Navigation = ({
   return (
     <div className={`navigation-container`}>
       {/* Navigation Bar */}
-      <button className="toggle-dark-mode-mobile" onClick={toggleDarkMode}>
+      <div
+        className={`toggle-dark-mode-mobile ${
+          isDarkMode ? "dark-mode" : "light-mode"
+        }`}
+        onClick={toggleDarkMode}
+      >
         {isDarkMode ? "Light Mode" : "Dark Mode"}
-      </button>
+      </div>
       <div className={`navbar ${isDarkMode ? "dark-mode" : "light-mode"}`}>
         {["about", "projects", "contact"].map((tab) => (
           <div
@@ -41,9 +46,14 @@ const Navigation = ({
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </div>
         ))}
-        <button className="toggle-dark-mode" onClick={toggleDarkMode}>
+        <div
+          className={`toggle-dark-mode ${
+            isDarkMode ? "dark-mode" : "light-mode"
+          }`}
+          onClick={toggleDarkMode}
+        >
           {isDarkMode ? "Light Mode" : "Dark Mode"}
-        </button>
+        </div>
       </div>
 
       {/* Tab Content */}
