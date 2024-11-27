@@ -5,6 +5,10 @@
     align-items: center;
     margin-top: 10px;
     font-family: 'Georgia', serif;
+    --light-bg-color: #FFA858;
+    --light-txt-color:  #FFF5E1;
+    --dark-bg-color: #30343F;
+    --dark-txt-color: #E6E8F0;
   }
   
   .navbar {
@@ -22,6 +26,11 @@
     top: 0;
     z-index: 10;
   }
+
+  .navbar.light-mode {
+    background-color: var(--light-txt-color);
+    color: var(--light-bg-color);
+  }
   
   .tab {
     width: 55px;
@@ -29,30 +38,41 @@
     border-radius: 25px;
     transition: background-color 0.3s;
   }
+
+  .tab.light-mode {
+    background-color: var(--light-txt-color);
+    color: var(--light-bg-color);
+  }
   
   .tab.active.light-mode {
-    background-color: black;
-    color: white;
+    background-color: var(--light-txt-color);
+    color: var(--light-bg-color);
   }
   
   .tab.active.dark-mode {
-    background-color: #FFF;
-    color: black;
+    background-color: var(--dark-txt-color);
+    color: var(--dark-bg-color);
   }
-  .tab:hover {
-    background-color: lightgrey;
+  .tab.dark-mode:hover {
+    background-color: var(--dark-txt-color);
+     color: var(--dark-bg-color);
+  }
+
+  .tab.light-mode:hover {
+    background-color: var(--light-bg-color);
+    color: var(--light-txt-color);
   }
   
   .toggle-dark-mode.dark-mode {
- padding: 12px 20px;
+    padding: 12px 20px;
     cursor: pointer;
     border-radius: 20px;
     border: none;
     font-size: 14px;
     height: fit-content;
     font-family: 'Georgia', serif;
-    background-color: #FFF;
-    color: black;
+    background-color: var(--light-txt-color);
+    color: var(--light-bg-color);
   }
 
   .toggle-dark-mode.light-mode {
@@ -63,8 +83,8 @@
     font-size: 14px;
     height: fit-content;
     font-family: 'Georgia', serif;
-    background-color: black;
-    color: white;
+    background-color: var(--dark-bg-color);
+     color: var(--dark-txt-color);
   }
   
   /* Content container */
@@ -88,13 +108,13 @@
   }
   
   .light-mode {
-    background-color: white;
-    color: black;
+    background-color: var(--light-bg-color);
+    color: var(--light-txt-color);
   }
-  
+
   .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: var(--dark-bg-color);
+    color: var(--dark-txt-color);
   }
 
   .x-mark {

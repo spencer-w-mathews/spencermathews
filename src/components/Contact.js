@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./Contact.css"; // For styling the contact page
 
-const Contact = () => {
+const Contact = ({ isDarkMode }) => {
   // State to manage form submission status
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -36,7 +36,10 @@ const Contact = () => {
             <textarea id="message" name="message" required></textarea>
           </div>
 
-          <button type="submit" className="cta-button">
+          <button
+            type="submit"
+            className={`cta-button ${isDarkMode ? "dark" : "light"}`}
+          >
             Send Message
           </button>
         </form>

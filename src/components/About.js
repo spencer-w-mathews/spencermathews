@@ -2,13 +2,13 @@ import React from "react";
 import "./About.css";
 import workspaceImage from "./about.png"; // Import the generated image
 
-const About = () => {
+const About = ({ isDarkMode }) => {
   return (
     <div className="about-container">
       <div className="about-image">
         <img src={workspaceImage} alt="Futuristic Workspace" />
       </div>
-      <div className="about-content">
+      <div className={`about-content ${isDarkMode ? "dark" : "light"}`}>
         <h1 className="about-heading">About Me</h1>
         <p className="about-description">
           I am a skilled developer with expertise in React, C#, SQL, TypeScript,

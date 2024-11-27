@@ -4,7 +4,10 @@
   box-sizing: border-box;
   width: 100%;
   z-index: 1000;
-  
+    --light-bg-color: #FFA858;
+  --light-txt-color:  #FFF5E1;
+  --dark-bg-color: #30343F;
+  --dark-txt-color: #E6E8F0;
 }
 
 .contact-form-ion {
@@ -61,8 +64,6 @@
 }
 
 .cta-button {
-  background-color: #34383a; /* Accent color for CTA button */
-  color: #fff;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -75,6 +76,16 @@
   border: none;
   cursor: pointer;
 }
+
+.cta-button.light {
+    background-color: var(--light-txt-color);
+    color: var(--light-bg-color);
+  }
+
+.cta-button.dark {
+    background-color: var(--dark-txt-color);
+    color: var(--dark-bg-color);
+  }
 
 .cta-button:hover {
   background-color: #0eb7d4; /* Hover effect */

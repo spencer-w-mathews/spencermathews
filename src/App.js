@@ -11,7 +11,7 @@ const App = () => {
   const [content, setContent] = useState(<></>); // Track dark mode toggle
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleTabChange = (tab) => {
+  const handleTabChange = async (tab) => {
     setActiveTab(tab);
   };
   useEffect(() => {
@@ -26,17 +26,21 @@ const App = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
+    let tempTab = activeTab;
+    handleTabChange(null).then(() => {
+      handleTabChange(tempTab);
+    });
   };
 
   // Define which component to show based on the active tab
   const renderContent = () => {
     switch (activeTab) {
       case "about":
-        return setContent(<About />);
+        return setContent(<About isDarkMode={isDarkMode} />);
       case "projects":
-        return setContent(<Projects />);
+        return setContent(<Projects isDarkMode={isDarkMode} />);
       case "contact":
-        return setContent(<Contact />);
+        return setContent(<Contact isDarkMode={isDarkMode} />);
       default:
         return null;
     }

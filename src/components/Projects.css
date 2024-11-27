@@ -5,6 +5,10 @@
     color: #eee;
     margin-bottom: 20px;
     font-family: 'Georgia', serif;
+    --light-bg-color: #FFA858;
+  --light-txt-color:  #FFF5E1;
+  --dark-bg-color: #30343F;
+  --dark-txt-color: #E6E8F0;
   }
   
   .project-list {
@@ -16,8 +20,22 @@
     gap: 40px;
   }
   
-  .project-card {
-    background: #000;
+  .project-card.light {
+    background: var(--light-txt-color);
+    color: var(--light-bg-color);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    max-width: 300px;
+    padding: 20px;
+    box-shadow: 3px 4px 10px 10px rgba(79, 76, 76, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .project-card.dark {
+    background: var(--dark-txt-color);
+    color: var(--dark-bg-color);
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
