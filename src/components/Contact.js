@@ -13,9 +13,6 @@ const Contact = ({ isDarkMode }) => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(e.target.value);
-
-    console.log({ name, email, message });
     try {
       const templateParams = {
         name,
