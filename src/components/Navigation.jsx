@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 
-const Navigation = ({ content, onTabChange, isDarkMode, toggleDarkMode }) => {
-  const [activeTab, setActiveTab] = useState(null);
+const Navigation = ({ content, onTabChange, isDarkMode, toggleDarkMode, activeTab }) => {
+ 
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -11,12 +11,12 @@ const Navigation = ({ content, onTabChange, isDarkMode, toggleDarkMode }) => {
     const timer = setTimeout(() => {
       activeTab && setIsOpen(true);
       onTabChange(activeTab); // Open the content after closing
-    }, 600); // Match the transition duration for the closing effect
+    }, 500); // Match the transition duration for the closing effect
     return () => clearTimeout(timer);
   }, [activeTab]);
 
   const handleTabClick = (tab) => {
-    setActiveTab(tab);
+    onTabChange(tab);
     
   };
 
@@ -47,6 +47,7 @@ const Navigation = ({ content, onTabChange, isDarkMode, toggleDarkMode }) => {
         className={`tab-content ${isDarkMode ? 'dark-mode' : 'light-mode'} ${isOpen ? 'open' : ''}`}
         style={{ width: '80%' }}
       >
+        <div className='x-mark'><button onClick={() =>onTabChange(null)}>close</button></div>
         {content}
       </div>
     </div>

@@ -83,6 +83,19 @@
     background-color: black;
     color: white;
   }
+
+  .x-mark {
+    width: 100%;
+  }
+  .x-mark button{
+    z-index: 90000;
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: #333;
+    color: #FFF;
+    border-radius: 20px;
+  }
   
   @media (max-width: 768px) {
   .navbar {
