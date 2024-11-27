@@ -1,17 +1,40 @@
 // Contact.js
-import React, { useState } from "react";
+import React, { useDebugValue, useState } from "react";
 import "./Contact.css"; // For styling the contact page
+import emailjs from "@emailjs/browser";
 
 const Contact = ({ isDarkMode }) => {
   // State to manage form submission status
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    // Here you would typically send form data to a server
-    // For example: sendDataToServer(formData);
+    console.log(e.target.value);
+
+    console.log({ name, email, message });
+    try {
+      const templateParams = {
+        name,
+        email,
+        message,
+      };
+      await emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_PUBLIC_KEY
+      );
+      setName("");
+      setEmail("");
+      setMessage("");
+      alert("message sent successfully");
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -23,17 +46,37 @@ const Contact = ({ isDarkMode }) => {
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
           </div>
 
           <button
