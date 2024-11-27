@@ -1,38 +1,45 @@
-.about-page {
-  position: fixed;
-  top: 20px;
-  width: 100%;
-  z-index: 1000;  
+/* Container for both image and content side-by-side */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
 }
 
-.about {
-  position: relative;
-    overflow: hidden;
-    padding: 40px;
-    max-width: 300px;
-    z-index: 1000;  
-    color: #eee;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .about p {
-    margin-top: 10vh;
-    border-radius: 10px;
-    /* box-shadow: 0 4px 10px rgba(117, 213, 254, 0.5); */
-    background: #000;
-    padding: 40px;
-    margin-bottom: 0px;
-  }
-  
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+/* Styling for the image */
+.about-image {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-image img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Styling for the content */
+.about-content {
+  flex: 1;
+
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+}
+
   

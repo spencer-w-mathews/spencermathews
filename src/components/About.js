@@ -1,42 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './About.css';
-import gsap from 'gsap';
+import workspaceImage from './about.png'; // Import the generated image
 
 const About = () => {
-
-  const textRef = useRef(null);
-
-  useEffect(() => {
-    const lines = textRef.current.querySelectorAll('.line');
-
-    // GSAP Animation for each line
-    gsap.fromTo(
-      lines,
-      { opacity: 0, y: 10, x: 0, rotateY: 100}, // Starting state
-      {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        rotateY: 0,
-        duration: 1.5,
-        stagger: 0.9, // Delay between each line
-        ease: 'power1',
-      }
-    );
-
-  }, []);
-
-
-  return(
-  <div className='about-page'>
-  <div id="about" className="about" ref={textRef}>
-    {/* <h2>About Me</h2> */}
-    <p className='line'>
-    I am a skilled developer with expertise in React, C#, SQL, TypeScript, CSS, Express, and MongoDB. I have spent the past two years contributing to the health tech industry, building impactful solutions that improve lives. Before transitioning into tech, I honed my interpersonal skills over five years working at a carwash, where I developed a strong ability to connect with people and understand their needs—a foundation that complements my technical expertise.
-    </p>
-  </div>
-  </div>
-)};
-
+  return (
+    <div className="about-container">
+      <div className="about-image">
+        <img src={workspaceImage} alt="Futuristic Workspace" />
+      </div>
+      <div className="about-content">
+        <h1 className="about-heading">About Me</h1>
+        <p className="about-description">
+          I am a skilled developer with expertise in React, C#, SQL, TypeScript, CSS, Express, and MongoDB. I have spent the past two years contributing to the health tech industry, building impactful solutions that improve lives. Before transitioning into tech, I honed my interpersonal skills over five years working at a carwash, where I developed a strong ability to connect with people and understand their needs—a foundation that complements my technical expertise.
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default About;

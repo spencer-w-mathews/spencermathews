@@ -1,9 +1,7 @@
 /* Contact.css */
 .contact-page {
-  font-family: Arial, sans-serif;
+  font-family: 'Georgia', serif;
   box-sizing: border-box;
-  position: fixed;
-  top: 12%;
   width: 100%;
   z-index: 1000;
   
@@ -13,20 +11,27 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
-  background-color: #000;
-  max-width: 300px;
+  max-width: 1000px;
   padding: 20px 30px;
 }
 
 .contact-form-ion h2 {
-  color: #4CC9FE
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.contact-form-ion p {
+  text-align: center;
+  margin-bottom: 20px;
+
 }
 
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -37,7 +42,6 @@
 
 .form-group label {
   font-size: 1.1em;
-  color: #eee;
 }
 
 .form-group input,
@@ -57,21 +61,24 @@
 }
 
 .cta-button {
-  background-color: #4CC9FE; /* Accent color for CTA button */
-  color: #000;
+  background-color: #34383a; /* Accent color for CTA button */
+  color: #fff;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 12px 30px;
   text-decoration: none;
   font-size: 1.1em;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  width: 100%;
+  width: fit-content;
   border: none;
   cursor: pointer;
 }
 
 .cta-button:hover {
-  background-color: #333; /* Hover effect */
-  color: #eee;
+  background-color: #0eb7d4; /* Hover effect */
+  color: #000;
 }
 
 .submission-message {

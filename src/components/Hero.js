@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import ThreeScene from './ThreeScene';
+
 import './Hero.css';
 import Skills from './Skills';
 import gsap from 'gsap';

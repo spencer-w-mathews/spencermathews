@@ -1,0 +1,129 @@
+/* Base styles for navigation */
+.navigation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    /* background-color: white; */
+    border-radius: 50px;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+  }
+  
+  .tab.active.light-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  .tab.active.dark-mode {
+    background-color: #FFF;
+    color: black;
+  }
+  .tab:hover {
+    background-color: lightgrey;
+  }
+  
+  .toggle-dark-mode {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #ddd;
+    border: none;
+    font-size: 14px;
+    height: 40px;
+    font-family: 'Georgia', serif;
+  }
+  
+  /* Content container */
+  .tab-content {
+    margin-top: 10px; /* Reduce gap between navbar and content */
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    transition: height 0.6s ease, opacity 0.6s ease;
+    height: 0; /* Initially collapsed */
+    opacity: 0; /* Initially hidden */
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tab-content.open {
+    height: 70vh; /* Take up 90% of the viewport height */
+    opacity: 1;  /* Make visible */
+  }
+  
+  .light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .tabs {
+    display: none; /* Hide the tabs on mobile */
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .tabs.menu-open {
+    display: flex; /* Show the tabs when menu is open */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu */
+  }
+
+  .hamburger-icon {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  .hamburger-icon::before {
+    top: 10px;
+  }
+
+  .hamburger-icon::after {
+    top: -10px;
+  }
+}
