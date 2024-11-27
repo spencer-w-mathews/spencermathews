@@ -22,7 +22,7 @@
     margin-right: auto;
     border-radius: 8px;
     margin-bottom: 20px;
-    width: 300px;
+    max-width: 300px;
     padding: 20px;
     box-shadow: 3px 4px 10px 10px rgba(79, 76, 76, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;

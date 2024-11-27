@@ -1,6 +1,6 @@
 // Contact.js
-import React, { useState } from 'react';
-import './Contact.css'; // For styling the contact page
+import React, { useState } from "react";
+import "./Contact.css"; // For styling the contact page
 
 const Contact = () => {
   // State to manage form submission status
@@ -16,7 +16,7 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      <div className='contact-form-ion'>
+      <div className="contact-form-ion">
         <h2>Get in Touch</h2>
         <p>Fill out the form below, and I will reach out to you shortly.</p>
 
@@ -46,7 +46,7 @@ const Contact = () => {
             <p>Thank you for reaching out! We will get back to you shortly.</p>
           </div>
         )}
-        </div>
+      </div>
     </div>
   );
 };
