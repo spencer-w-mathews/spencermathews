@@ -45,8 +45,8 @@
   }
   
   .tab.active.light-mode {
-    background-color: var(--light-txt-color);
-    color: var(--light-bg-color);
+    background-color: var(--light-bg-color);
+    color: var(--light-txt-color);
   }
   
   .tab.active.dark-mode {

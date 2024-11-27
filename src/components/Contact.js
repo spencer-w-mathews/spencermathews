@@ -16,7 +16,7 @@ const Contact = ({ isDarkMode }) => {
 
   return (
     <div className="contact-page">
-      <div className="contact-form-ion">
+      <div className={`contact-form-ion ${isDarkMode ? "dark" : "light"}`}>
         <h2>Get in Touch</h2>
         <p>Fill out the form below, and I will reach out to you shortly.</p>
 

@@ -18,6 +18,16 @@
   padding: 20px 30px;
 }
 
+.contact-form-ion.light {
+  background-color: var(--light-txt-color);
+  color: var(--light-bg-color);
+}
+
+.contact-form-ion.dark {
+  background-color: var(--dark-txt-color);
+  color: var(--dark-bg-color);
+}
+
 .contact-form-ion h2 {
   text-align: center;
   font-size: 32px;
@@ -80,11 +90,13 @@
 .cta-button.light {
     background-color: var(--light-txt-color);
     color: var(--light-bg-color);
+    border: 1px solid var(--light-bg-color);
   }
 
 .cta-button.dark {
     background-color: var(--dark-txt-color);
     color: var(--dark-bg-color);
+    border: 1px solid var(--dark-bg-color);
   }
 
 .cta-button:hover {
