@@ -1,13 +1,28 @@
-import React from 'react';
-import './Projects.css';
-import techsagna from '../techsagna.png'
+import React from "react";
+import "./Projects.css";
+import techsagna from "../techsagna.png";
+import simplybulk from "../simplybulk.png";
 
 const projects = [
-  { title: 'Portfolio Website', description: 'This personal portfolio built with React.' },
-  { title: 'Techsagna', description: 'A React app for a local IT company', link: 'https://spencer-w-mathews.github.io/techsagna/#/', image:  techsagna},
+  {
+    title: "Portfolio Website",
+    description: "This personal portfolio built with React.",
+  },
+  {
+    title: "Techsagna",
+    description: "A React app for a local IT company",
+    link: "https://spencer-w-mathews.github.io/techsagna/#/",
+    image: techsagna,
+  },
+  {
+    title: "Simpy Bulk",
+    description: "A React app for a local retail store",
+    link: "https://spencer-w-mathews.github.io/simplybulkmarket/#/",
+    image: simplybulk,
+  },
 ];
 
-const Projects = ({isDarkMode}) => (
+const Projects = ({ isDarkMode }) => (
   <section id="projects" className="projects">
     <div className="project-list">
       {projects.map((project) => (
