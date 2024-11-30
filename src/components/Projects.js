@@ -15,7 +15,7 @@ const projects = [
     image: techsagna,
   },
   {
-    title: "Simpy Bulk",
+    title: "Simply Bulk",
     description: "A React app for a local retail store",
     link: "https://spencer-w-mathews.github.io/simplybulkmarket/#/",
     image: simplybulk,
