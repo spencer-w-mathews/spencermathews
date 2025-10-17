@@ -3,6 +3,7 @@ import "./Projects.css";
 import techsagna from "../images/techsagna.png";
 import simplybulk from "../images/simplybulk.png";
 import peak from "../images/Peak.png";
+import rainbow from "../images/rainbow.png"
 
 const projects = [
   {
@@ -17,7 +18,7 @@ const projects = [
     description:
       "A React app for a local Photographer. Contact form built using Email.js. The images for this site are stored in github pages in order to prevent slowness.",
     link: "https://rainbowtroutreverie.com/",
-    image: techsagna,
+    image: rainbow,
   },
   {
     title: "Techsagna",
