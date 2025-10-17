@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import workspaceImage from "./about.png"; // Import the generated image
+import workspaceImage from "../images/about.png"; // Import the generated image
 
 const About = ({ isDarkMode }) => {
   return (

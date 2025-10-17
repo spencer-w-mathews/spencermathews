@@ -1,12 +1,23 @@
 import React from "react";
 import "./Projects.css";
-import techsagna from "../techsagna.png";
-import simplybulk from "../simplybulk.png";
+import techsagna from "../images/techsagna.png";
+import simplybulk from "../images/simplybulk.png";
+import peak from "../images/Peak.png";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "This personal portfolio built with React.",
+    title: "Peak Efficiency",
+    description:
+      "A React app for a local IT company. Waitlist form connected to google sheets allowing workflows to trigger as soon as client inputs email.",
+    link: "https://spencer-w-mathews.github.io/peak-efficiency/",
+    image: peak,
+  },
+  {
+    title: "Rainbow Trout Reverie",
+    description:
+      "A React app for a local Photographer. Contact form built using Email.js. The images for this site are stored in github pages in order to prevent slowness.",
+    link: "https://rainbowtroutreverie.com/",
+    image: techsagna,
   },
   {
     title: "Techsagna",
@@ -19,6 +30,10 @@ const projects = [
     description: "A React app for a local retail store",
     link: "https://spencer-w-mathews.github.io/simplybulkmarket/#/",
     image: simplybulk,
+  },
+  {
+    title: "Portfolio Website",
+    description: "This personal portfolio built with React.",
   },
 ];
 
