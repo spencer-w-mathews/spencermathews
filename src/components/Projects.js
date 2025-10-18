@@ -1,4 +1,3 @@
-import React from "react";
 import "./Projects.css";
 import techsagna from "../images/techsagna.png";
 import simplybulk from "../images/simplybulk.png";
