@@ -25,12 +25,8 @@ const About = ({ isDarkMode }) => {
           </div>
           <div className="about-card stats">
             <div className="stat">
-              <span className="stat-number">10+</span>
+              <span className="stat-number">4+</span>
               <span className="stat-label">Products launched</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">2x</span>
-              <span className="stat-label">Team efficiency gains</span>
             </div>
             <div className="stat">
               <span className="stat-number">24/7</span>
@@ -41,10 +37,13 @@ const About = ({ isDarkMode }) => {
         <div className="tag-row">
           {[
             "React",
+            "React Native",
+            "Vite",
             "TypeScript",
             "C#",
-            "SQL",
             "Node & Express",
+            "SQL",
+            "MySQL",
             "Design Systems",
             "Accessibility",
             "Cloud & DevOps",

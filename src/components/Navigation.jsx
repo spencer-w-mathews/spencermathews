@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+
 import { FiBriefcase, FiMail, FiMoon, FiSun, FiUser } from "react-icons/fi";
 import "./Navigation.css";
 
@@ -16,17 +16,6 @@ const Navigation = ({
   activeTab,
   isOpen,
 }) => {
-  const contentDivRef = useRef(null);
-
-  useEffect(() => {
-    if (contentDivRef.current) {
-      contentDivRef.current.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  }, [content]);
-
   return (
     <div className="navigation-container">
       <nav className={`navbar ${isDarkMode ? "dark-mode" : "light-mode"}`}>
@@ -59,18 +48,17 @@ const Navigation = ({
         className={`tab-content ${isDarkMode ? "dark-mode" : "light-mode"} ${
           isOpen ? "open" : ""
         }`}
-        ref={contentDivRef}
       >
         <div className="tab-content-header">
           <div className="tab-label">
             {tabs.find((tab) => tab.id === activeTab)?.icon}
             <span>{tabs.find((tab) => tab.id === activeTab)?.label}</span>
           </div>
-          <button className="close-button" onClick={() => onTabChange("about")}>
+          <button className="close-button" onClick={() => onTabChange("")}>
             Close
           </button>
         </div>
-        {content}
+        <div>{content}</div>
       </div>
     </div>
   );
