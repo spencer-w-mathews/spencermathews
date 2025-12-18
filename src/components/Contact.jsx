@@ -1,16 +1,13 @@
-// Contact.js
 import { useState } from "react";
-import "./Contact.css"; // For styling the contact page
+import "./Contact.css";
 import emailjs from "@emailjs/browser";
 
 const Contact = ({ isDarkMode }) => {
-  // State to manage form submission status
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -28,17 +25,31 @@ const Contact = ({ isDarkMode }) => {
       setName("");
       setEmail("");
       setMessage("");
-      alert("message sent successfully");
+      setIsSubmitted(true);
     } catch (e) {
       console.log(e);
+      setIsSubmitted(false);
     }
   };
 
   return (
     <div className="contact-page">
+      <div className="contact-intro">
+        <p className="eyebrow">Let’s collaborate</p>
+        <h2>Tell me about the product you want to bring to life</h2>
+        <p className="contact-lead">
+          Whether you need a polished interface, a scalable backend, or a
+          partner to shape an MVP, I respond within one business day.
+        </p>
+        <div className="contact-highlights">
+          <span>New builds & redesigns</span>
+          <span>Design system implementation</span>
+          <span>Performance & reliability audits</span>
+        </div>
+      </div>
       <div className={`contact-form-ion ${isDarkMode ? "dark" : "light"}`}>
-        <h2>Get in Touch</h2>
-        <p>Fill out the form below, and I will reach out to you shortly.</p>
+        <h2>Start the conversation</h2>
+        <p>Share a few details and I'll be in touch shortly.</p>
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
@@ -84,11 +95,15 @@ const Contact = ({ isDarkMode }) => {
           </button>
         </form>
 
-        {isSubmitted && (
-          <div className="submission-message">
-            <p>Thank you for reaching out! We will get back to you shortly.</p>
-          </div>
-        )}
+        <div
+          className={`submission-message ${
+            isSubmitted ? "visible" : "hidden"
+          }`}
+        >
+          {isSubmitted
+            ? "Thanks for reaching out — your note is on its way."
+            : "You’ll hear back within one business day."}
+        </div>
       </div>
     </div>
   );
