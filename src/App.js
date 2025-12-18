@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState("projects");
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -49,7 +49,7 @@ const App = () => {
           <h1>
             Spencer Mathews
             <span className="hero-accent">
-              builds resilient digital products.
+              I build resilient digital products.
             </span>
           </h1>
           <p className="hero-body">

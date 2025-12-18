@@ -1,10 +1,9 @@
-
 import { FiBriefcase, FiMail, FiMoon, FiSun, FiUser } from "react-icons/fi";
 import "./Navigation.css";
 
 const tabs = [
-  { id: "about", label: "About", icon: <FiUser /> },
   { id: "projects", label: "Projects", icon: <FiBriefcase /> },
+  { id: "about", label: "About", icon: <FiUser /> },
   { id: "contact", label: "Contact", icon: <FiMail /> },
 ];
 
