@@ -1,16 +1,16 @@
 import "./Projects.css";
 import techsagna from "../images/techsagna.png";
 import simplybulk from "../images/simplybulk.png";
-import peak from "../images/Peak.png";
-import rainbow from "../images/rainbow.png"
+import bluebird from "../images/Bluebird.png";
+import rainbow from "../images/rainbow.png";
 
 const projects = [
   {
-    title: "Peak Efficiency",
+    title: "Bluebird AGI",
     description:
-      "A React app for a local IT company. Waitlist form connected to google sheets allowing workflows to trigger as soon as client inputs email.",
+      "Bluebird is a SaaS application designed to reduce cognitive load in email-heavy workflows through AI-driven classification, tone analysis, and automation. I serve as the Founding Software Developer, responsible for system architecture, full-stack development, OAuth integrations, cloud infrastructure, and AI workflows. The application is currently in beta, with ongoing work centered on performance, security, and multi-tenant scalability.",
     link: "https://spencer-w-mathews.github.io/peak-efficiency/",
-    image: peak,
+    image: bluebird,
   },
   {
     title: "Rainbow Trout Reverie",
