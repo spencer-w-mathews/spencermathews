@@ -8,59 +8,85 @@ const projects = [
   {
     title: "Bluebird AGI",
     description:
-      "Bluebird is a SaaS application designed to reduce cognitive load in email-heavy workflows through AI-driven classification, tone analysis, and automation. I serve as the Founding Software Developer, responsible for system architecture, full-stack development, OAuth integrations, cloud infrastructure, and AI workflows. The application is currently in beta, with ongoing work centered on performance, security, and multi-tenant scalability.",
+      "AI-powered communications platform that classifies, drafts, and routes messages to reduce operator load. Built multi-tenant architecture, OAuth integrations, AI pipelines, and secure cloud infrastructure.",
     link: "https://spencer-w-mathews.github.io/peak-efficiency/",
     image: bluebird,
+    tags: ["React", "OpenAI", "Node", "Azure"],
   },
   {
     title: "Rainbow Trout Reverie",
     description:
-      "A React app for a local Photographer. Contact form built using Email.js. The images for this site are stored in github pages in order to prevent slowness.",
+      "Minimalist photography experience with tailored content delivery and EmailJS-powered booking flow optimized for mobile conversions.",
     link: "https://rainbowtroutreverie.com/",
     image: rainbow,
+    tags: ["React", "EmailJS", "Responsive UX"],
   },
   {
     title: "Techsagna",
-    description: "A React app for a local IT company",
+    description:
+      "Brand-forward presence for a local IT team with modular page blocks, CMS-ready structure, and crisp performance budgets.",
     link: "https://spencer-w-mathews.github.io/techsagna/#/",
     image: techsagna,
+    tags: ["React", "Design Systems", "Animations"],
   },
   {
     title: "Simply Bulk",
-    description: "A React app for a local retail store",
+    description:
+      "Retail experience highlighting merchandising, local sourcing, and clear calls-to-action for shoppers.",
     link: "https://spencer-w-mathews.github.io/simplybulkmarket/#/",
     image: simplybulk,
-  },
-  {
-    title: "Portfolio Website",
-    description: "This personal portfolio built with React.",
+    tags: ["React", "UX Writing", "Static Site"],
   },
 ];
 
 const Projects = ({ isDarkMode }) => (
   <section id="projects" className="projects">
-    <div className="project-list">
+    <div className="projects-header">
+      <div>
+        <p className="eyebrow">Selected work</p>
+        <h2>Impactful products with clarity and craft</h2>
+        <p className="projects-lead">
+          A sampling of products that balance usability, reliability, and visual
+          polish. Each engagement pairs thoughtful UX with strong engineering
+          fundamentals.
+        </p>
+      </div>
+      <div className={`project-pill ${isDarkMode ? "dark" : "light"}`}>
+        <span className="pill-dot" />
+        Shipping fast without sacrificing detail.
+      </div>
+    </div>
+    <div className="project-grid">
       {projects.map((project) => (
-        <div
+        <article
           key={project.title}
           className={`project-card ${isDarkMode ? "dark" : "light"}`}
         >
-          <h3 style={{ marginBottom: 15 }}>{project.title}</h3>
           {project.image && (
-            <img
-              src={project.image}
-              alt="techsagna website"
-              width={220}
-              style={{ marginBottom: 15 }}
-            />
+            <div className="project-visual">
+              <img src={project.image} alt={project.title} />
+            </div>
           )}
-          <p>{project.description}</p>
+          <div className="project-body">
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div className="project-tags">
+              {project.tags?.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
+            </div>
+          </div>
           {project.link && (
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
+            <a
+              className="project-link"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View live
             </a>
           )}
-        </div>
+        </article>
       ))}
     </div>
   </section>

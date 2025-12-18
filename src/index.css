@@ -1,27 +1,27 @@
-/* index.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #0b1021;
+  color: #e8ecf5;
   overflow-x: hidden;
-  height: 100vh;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
   padding: 0;
 }
 
 a {
   text-decoration: none;
-  color: #7302fd;
+  color: inherit;
 }
 
-a:hover {
-  color: #fff;
-}
-
-section {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }

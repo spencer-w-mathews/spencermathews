@@ -1,72 +1,89 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./App.css";
-import Navigation from "../src/components/Navigation"; // Import your Navigation component
-import About from "../src/components/About"; // Assuming AboutPage is one of the components
-import Projects from "../src/components/Projects"; // Assuming ProjectsPage is another component
-import Contact from "../src/components/Contact"; // Assuming ContactPage is another component
+import Navigation from "./components/Navigation";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState(null); // Track the active tab
+  const [activeTab, setActiveTab] = useState("about");
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [content, setContent] = useState(<></>); // Track dark mode toggle
   const [isOpen, setIsOpen] = useState(false);
 
   const handleTabChange = async (tab) => {
     setActiveTab(tab);
   };
   useEffect(() => {
-    // Smoothly close the content div before reopening when the tab changes
     setIsOpen(false);
     const timer = setTimeout(() => {
       activeTab && setIsOpen(true);
-      renderContent(); // Open the content after closing
-    }, 500); // Match the transition duration for the closing effect
+    }, 350);
     return () => clearTimeout(timer);
   }, [activeTab]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    let tempTab = activeTab;
-    handleTabChange(null).then(() => {
-      handleTabChange(tempTab);
-    });
   };
 
-  // Define which component to show based on the active tab
-  const renderContent = () => {
+  const renderedContent = useMemo(() => {
     switch (activeTab) {
       case "about":
-        return setContent(<About isDarkMode={isDarkMode} />);
+        return <About isDarkMode={isDarkMode} />;
       case "projects":
-        return setContent(<Projects isDarkMode={isDarkMode} />);
+        return <Projects isDarkMode={isDarkMode} />;
       case "contact":
-        return setContent(<Contact isDarkMode={isDarkMode} />);
+        return <Contact isDarkMode={isDarkMode} />;
       default:
         return null;
     }
-  };
+  }, [activeTab, isDarkMode]);
 
   return (
     <div className={`app-container ${isDarkMode ? "dark" : "light"}`}>
-      {isDarkMode ? (
-        <div className="background"></div>
-      ) : (
-        <div className="backgroundlight"></div>
-      )}
-      {/* Navigation */}
-      <Navigation
-        activeTab={activeTab}
-        onTabChange={handleTabChange}
-        toggleDarkMode={toggleDarkMode}
-        isDarkMode={isDarkMode}
-        content={content}
-        isOpen={isOpen}
-      />
-
-      {/* Content Area */}
-      {/* <div className="content-container">
-        {renderContent()}
-      </div> */}
+      <div className="ambient-bg" />
+      <div className="glow blur-one" />
+      <div className="glow blur-two" />
+      <main className="app-shell">
+        <header className="hero">
+          <span className="eyebrow">Senior Software Engineer</span>
+          <h1>
+            Spencer Mathews
+            <span className="hero-accent">builds resilient digital products.</span>
+          </h1>
+          <p className="hero-body">
+            I design and ship thoughtful experiences across web, cloud, and AI.
+            From polished UI systems to scalable backends, I thrive on crafting
+            products that feel fast, intuitive, and purposeful.
+          </p>
+          <div className="hero-actions">
+            <button
+              className="primary-cta"
+              onClick={() => handleTabChange("projects")}
+            >
+              View featured work
+            </button>
+            <button
+              className="ghost-cta"
+              onClick={() => handleTabChange("contact")}
+            >
+              Start a conversation
+            </button>
+          </div>
+          <div className="hero-pills">
+            <span className="pill">Product-minded full-stack engineer</span>
+            <span className="pill">Design systems & accessibility</span>
+            <span className="pill">Performance & platform reliability</span>
+          </div>
+        </header>
+        <Navigation
+          activeTab={activeTab}
+          onTabChange={handleTabChange}
+          toggleDarkMode={toggleDarkMode}
+          isDarkMode={isDarkMode}
+          content={renderedContent}
+          isOpen={isOpen}
+        />
+      </main>
     </div>
   );
 };

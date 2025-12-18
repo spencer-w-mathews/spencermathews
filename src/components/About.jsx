@@ -1,24 +1,62 @@
 import React from "react";
 import "./About.css";
-import workspaceImage from "../images/about.png"; // Import the generated image
+import workspaceImage from "../images/about.png";
 
 const About = ({ isDarkMode }) => {
   return (
     <div className="about-container">
-      <div className="about-image">
-        <img src={workspaceImage} alt="Futuristic Workspace" />
-      </div>
       <div className={`about-content ${isDarkMode ? "dark" : "light"}`}>
-        <h1 className="about-heading">About Me</h1>
+        <h1 className="about-heading">Engineering with design sensibilities</h1>
         <p className="about-description">
-          I am a skilled developer with expertise in React, C#, SQL, TypeScript,
-          CSS, Express, and MongoDB. I have spent the past two years
-          contributing to the health tech industry, building impactful solutions
-          that improve lives. Before transitioning into tech, I honed my
-          interpersonal skills over five years working at a carwash, where I
-          developed a strong ability to connect with people and understand their
-          needs—a foundation that complements my technical expertise.
+          I build reliable, human-centered products end-to-end. My work blends
+          React, TypeScript, and modern design systems on the front end with
+          scalable Node, C#, and SQL backends. Recent efforts span AI-assisted
+          productivity tools, secure healthcare workflows, and multi-tenant
+          platforms tuned for performance and accessibility.
         </p>
+        <div className="about-grid">
+          <div className="about-card">
+            <h3>How I work</h3>
+            <p>
+              I partner closely with designers and product leaders, prototyping
+              quickly, instrumenting outcomes, and iterating on the details that
+              make experiences feel intentional.
+            </p>
+          </div>
+          <div className="about-card stats">
+            <div className="stat">
+              <span className="stat-number">10+</span>
+              <span className="stat-label">Products launched</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">2x</span>
+              <span className="stat-label">Team efficiency gains</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">24/7</span>
+              <span className="stat-label">Reliability mindset</span>
+            </div>
+          </div>
+        </div>
+        <div className="tag-row">
+          {[
+            "React",
+            "TypeScript",
+            "C#",
+            "SQL",
+            "Node & Express",
+            "Design Systems",
+            "Accessibility",
+            "Cloud & DevOps",
+          ].map((item) => (
+            <span key={item} className="tag">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="about-image">
+        <img src={workspaceImage} alt="Futuristic workspace" />
       </div>
     </div>
   );
