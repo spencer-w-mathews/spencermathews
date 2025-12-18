@@ -45,10 +45,12 @@ const App = () => {
       <div className="glow blur-two" />
       <main className="app-shell">
         <header className="hero">
-          <span className="eyebrow">Senior Software Engineer</span>
+          <span className="eyebrow">Software Engineer</span>
           <h1>
             Spencer Mathews
-            <span className="hero-accent">builds resilient digital products.</span>
+            <span className="hero-accent">
+              builds resilient digital products.
+            </span>
           </h1>
           <p className="hero-body">
             I design and ship thoughtful experiences across web, cloud, and AI.
