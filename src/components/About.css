@@ -188,10 +188,14 @@
    ========================================================= */
 @media (max-width: 960px) {
   .about-container {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    order: 1;
   }
 
   .about-image {
-    order: -1;
+    order: 2;
   }
 }
