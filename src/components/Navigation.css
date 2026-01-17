@@ -129,7 +129,7 @@
 }
 
 .tab-content.open {
-  max-height: 2600px;
+  max-height: 10000px;
   opacity: 1;
   overflow: visible;
 }
