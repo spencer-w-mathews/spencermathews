@@ -3,15 +3,33 @@ import techsagna from "../images/techsagna.png";
 import simplybulk from "../images/simplybulk.png";
 import bluebird from "../images/Bluebird.png";
 import rainbow from "../images/rainbow.png";
+import chandb from "../images/coloradohikeandbrew.png"
+import drakefamilycookbook from "../images/drakefamilycookbook.png"
 
 const projects = [
   {
     title: "Bluebird AGI",
     description:
-      "AI-powered communications platform that classifies, drafts, and routes messages to reduce operator load. Built multi-tenant architecture, OAuth integrations, AI pipelines, and secure cloud infrastructure.",
-    link: "https://spencer-w-mathews.github.io/peak-efficiency/",
+      "AI-powered communications platform that classifies, drafts, and routes messages to reduce operator load. Built multi-tenant architecture, OAuth integrations, AI pipelines, and secure cloud infrastructure. Marketing site built with sanity CMS for ease of flexibility and use for non-technical partners.",
+    link: "https://www.bluebirdagi.com",
     image: bluebird,
-    tags: ["React", "OpenAI", "Node", "Azure"],
+    tags: ["React", "OpenAI", "Node", "Azure", "Sanity"],
+  },
+  {
+    title: "Colorado Hike & Brew",
+    description:
+      "A responsive, modern web application built with React and Vite, focused on clean UI, component-driven architecture, and performance. I built this project to share my love of great hikes and better beers.",
+    link: "https://harmonious-boba-de2baf.netlify.app/",
+    image: chandb,
+    tags: ["React", "Vite", "Netlify"],
+  },
+  {
+    title: "Drake Family Cookbook",
+    description:
+      "A family cookbook made from my families recipes. Made for my grandmother who has always shared her love through her cooking.",
+    link: "https://drakefamilycookbook.com",
+    image: drakefamilycookbook,
+    tags: ["React", "Vite", "Netlify", "Sanity"],
   },
   {
     title: "Rainbow Trout Reverie",
