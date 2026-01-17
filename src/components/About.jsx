@@ -25,7 +25,7 @@ const About = ({ isDarkMode }) => {
           </div>
           <div className="about-card stats">
             <div className="stat">
-              <span className="stat-number">4+</span>
+              <span className="stat-number">6+</span>
               <span className="stat-label">Products launched</span>
             </div>
             <div className="stat">
